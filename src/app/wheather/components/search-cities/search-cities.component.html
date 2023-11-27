@@ -1,0 +1,19 @@
+<div class="p-4 text-center ">
+    <h1 class="text-3xl  mb-4 " style="text-wrap: balance;">Busca el Tiempo en tu Ciudad</h1>
+
+    <div class="w-full h-px bg-gray-500 bg-opacity-50 mb-10"></div>
+
+
+    <div class="flex items-center">
+        <input #cityName type="text"
+            class="w-full p-3 border border-emerald-500 focus:outline-emerald-600 rounded-2xl focus:bg-cyan-200 animate-pulse"
+            placeholder="Busca tu ciudad" (keyup.enter)="getWeather(cityName.value)">
+    </div>
+
+    <div class="mt-4">
+        <button class="w-48 bg-cyan-600 text-white p-3 rounded-2xl hover:bg-cyan-700 focus:outline-none"
+            (click)="getWeather(cityName.value)">
+            BUSCAR CLIMA
+        </button>
+    </div>
+</div>

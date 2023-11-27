@@ -1,0 +1,9 @@
+<div class="grid md:grid-cols-2 gap-8 p-8 ">
+    <!-- Primera columna -->
+    <app-search-cities class="animate__animated animate__fadeInLeft"></app-search-cities>
+
+    <!-- Segunda columna -->
+    @if (weatherInfo!=null) {
+    <app-weather-card class="animate__animated animate__fadeInRight"></app-weather-card>
+}
+</div>

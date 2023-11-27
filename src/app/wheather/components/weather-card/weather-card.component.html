@@ -1,0 +1,38 @@
+<div class="p-4">
+    <h1 class="text-3xl mb-4 text-center" style="text-wrap: balance;">Detalles de {{weatherInfo!.name}}</h1>
+
+    <div class="w-full h-px bg-gray-500 bg-opacity-50 mb-10"></div>
+
+    <div class="border border-gray-300 p-8 rounded-2xl">
+        <div class="flex flex-row flex-wrap justify-between mb-4">
+            <p class="font-bold text-lg w-full md:w-auto mb-2 md:mb-0">{{weatherInfo!.name}} (Latitud:
+                {{weatherInfo!.coord.lat}} - Longitud: {{weatherInfo!.coord.lon}})</p>
+            <p class="font-bold text-xl w-full md:w-auto" style="text-transform: capitalize;">
+                {{weatherInfo!.weather[0].description}}</p>
+        </div>
+
+        <p class="mb-2">Fecha: {{getDate()}}</p>
+        <p class="mb-4">Hora: {{getHours()}}</p>
+
+        <p class="text-center font-bold text-6xl mb-4">{{weatherInfo!.main.temp}}ºC</p>
+
+        <p class="text-center mb-4 text-gray-400">Mínimo: {{weatherInfo!.main.temp_min}}ºC - Máximo:
+            {{weatherInfo!.main.temp_max}}ºC</p>
+
+        <p class="text-center mb-4 text-gray-400">Sensación Térmica: {{weatherInfo!.main.feels_like}}ºC</p>
+
+        <div class="flex flex-col md:flex-row justify-between text-gray-400">
+
+            <div class="w-full md:w-auto mb-4 md:mb-0">
+                <p><i class="bi bi-wind text-black"></i> {{weatherInfo!.wind.speed}} km/h</p>
+                <p><i class="bi bi-droplet text-black"></i> {{weatherInfo!.main.humidity}}%</p>
+                <p><i class="bi bi-thermometer-half text-black"></i> {{weatherInfo!.main.pressure}}Pa</p>
+            </div>
+
+            <div class="flex items-center justify-center">
+                <img src="{{getIcon()}}" class="w-16 h-16">
+            </div>
+
+        </div>
+    </div>
+</div>
